@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang ="pt-BR">
+?<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name=description content ="Sistema de Gestão Compartilhada"/>
+	<meta name=viewport content ="width=device-width, initial-scale=1"/>
+	<title>Gestão Compartilhada</title>
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" href="css/select2.min.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link href="shadowbox/shadowbox.css" rel="stylesheet" type="text/css" />
+	<!--JS-->
+	<script type="text/javascript" src="shadowbox/shadowbox.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js" ></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript">
+		Shadowbox.init({
+		language: 'pt',
+		player: ['img', 'html', 'swf']
+		});
+	</script>
+</head>?<!--
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+--><div class="row-fluid">
+    <div class="span12">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner ">
+				<div class="container">
+					<a class="brand" href="/sdgc/index"><img src="/sdgc/img/logoMenu.png" class="img-rounded"><strong class="fontLogo">SDGC</strong><sub><i>3.4.0</i></sub></a>
+									</div>
+			</div>
+		</div>
+	</div>
+</div>
+<body>
+<div class="modal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3><center>SDGC - Gestão Compartilhada</center></h3>
+  </div>
+	  <form name="form1" method="post" action="login" class="form-search">
+		  <div class="modal-body">
+				<div class="span2">
+					<img src="img/bras_macae.gif" class="img-rounded-fluid "/>	
+				</div>
+				<div class="span3">
+					<center>
+						<div class="control-grup">
+							<label for="" class="control-label"></label>
+							<div class="controls">
+								<div class="input-append">
+									<span class="add-on">
+										<i class="icon-user"></i>
+									</span>
+									<input type="text" id="prependInput" name="nome_usuario" placeholder="Nome de Usuário">
+								</div>
+							</div>
+						</div>
+						<div class="control-grup">
+							<label for="" class="control-label"></label>
+							<div class="controls">
+								<div class="input-append">
+									<span class="add-on">
+										<i class="icon-eye-open"></i>
+									</span>
+									<input type="password" id="inputPassword" name="senha_usuario" placeholder="senha">
+								</div>
+							</div>
+						</div>
+						<div class="control-grup">
+							<label for="" class="control-label"></label>
+							<div class="controls">
+							</div>
+						</div>
+					</center>
+				</div>
+		  </div>
+		  <div class="modal-footer">
+			<input type="hidden" name="alterarSenha" value="">
+			<input type="hidden" name="verifica" value="1">
+			<input type="submit" class="btn btn-primary" name="Submit" value="Entrar">
+		  </div>
+	 </form>
+</div>   
+<script type="text/javascript" src="js/bootstrap.js" ></script>
+?
+<div class="row-fluid">
+    <div class="span12">
+		<div class="espmenu">
+		</div>
+        <div class="navbar navbar-inverse navbar-fixed-bottom">
+          	<div class="navbar-inner muted">
+					<div class="span2 text-right"></div>
+					<div class="span5 text-right esprodape">
+						 <b>SDGC  Gestão Compartilhada</b> - <b>Telefone:</b> <i>(22) 2765 8700 <br>
+						<b>Frequência: </b><i>327</i> <b>Relógio: </b><i>290 e 307</i> <b>SDGC:</b> <i>300</i> <a href="/sdgc/doc/FORMULARIO_ACESSO.pdf" download><b> Criar Acesso </b></a><br>
+						Copyright © 2012 -Adjunta de Recursos Humanos - RegesDias<br>
+					</div>	
+					<div class="span5 esprodape">
+						<img src="img/logoRodape.png" class="img-rounded-fluid "/>	
+					</div>
+          	</div>
+         </div>
+    </div>
+</div></body>
+</html>
