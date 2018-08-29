@@ -9,7 +9,7 @@ payload={'nome_usuario': "pelisangela",
          'alterarSenha': '',
          'verifica': '1'}
 
-payload1 = {'organiza': 'nome_info',
+payload1={'organiza': 'nome_info',
             'nome': '',
             'matricula': '27330',
             'cpf': '',
