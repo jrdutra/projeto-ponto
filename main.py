@@ -35,6 +35,3 @@ with requests.Session() as session:
      response = session.post(PESQUISA_URL, data=payload1)
      response = session.post(PONTO_URL, data=payload2)
      print(response.text)
-     
-    
-    
