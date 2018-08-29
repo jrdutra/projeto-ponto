@@ -1,4 +1,5 @@
 from SDGCBot import pontobiometrico
+from SDGCBot import extratordedados
 
 parametros_req = {
     'login': 'pelisangela',
@@ -10,3 +11,5 @@ parametros_req = {
 }
 
 html_str = pontobiometrico.requisita(parametros_req)
+dados = extratordedados.extrair(html_str)
+print(dados)
