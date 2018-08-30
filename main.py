@@ -12,4 +12,4 @@ parametros_req = {
 
 html_str = pontobiometrico.requisita(parametros_req)
 dados = extratordedados.extrair(html_str)
-print(dados)
+print(dados[5][2])
