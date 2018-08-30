@@ -7,11 +7,11 @@ from SDGCBot import calculadoradehoras
 # ================
 mes = "08"
 ano = "2018"
-cpf = "08581603742"
-matricula = "28142"
+cpf = "11666683710"
+matricula = "27330"
 cargahorria = 6
 login = "-"
-senha= "-"
+senha = "-"
 # ================
 
 datafinal = mes + '-' + ano
@@ -31,5 +31,5 @@ html_str = pontobiometrico.requisita(parametros_req)
 tabela = extratordedados.extrair(html_str)
 
 horas = calculadoradehoras.calcsaldomes(tabela, mes, ano, cargahorria)
-print(horas)
+print("Saldo de: " + horas + " horas")
 

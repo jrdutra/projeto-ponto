@@ -29,15 +29,18 @@ def calctotaltrabmes(tabela, mes, ano):
     return int(saldodomes.total_seconds())
 
 
-def calcpadraomes(tabela, cargahoraria):
+def calcpadraomes(tabela, cargahoraria, mes):
     tatalsegundos = 0
     hj = date.today()
-    diadehoje = hj.day
+    if hj.month == int(mes):
+        diaderefernecia = hj.day
+    else:
+        diaderefernecia = 31
     for i in range(0, len(tabela)):
         dia = str(tabela[i][1])
         sabado = "Sábado"
         domingo = "Domingo"
-        if (dia != sabado and dia != domingo) and (int(tabela[i][0]) <= diadehoje):
+        if (dia != sabado and dia != domingo) and (int(tabela[i][0]) <= diaderefernecia):
             tatalsegundos = tatalsegundos + (cargahoraria * 3600)
     return tatalsegundos
 
@@ -65,7 +68,7 @@ def verificamarcacaodia(linha):
     for i in range(0, 11):
         strhora = linha[i]
         if strhora.find(":") >= 0:
-           flag = True
+            flag = True
     return flag
 
 
@@ -77,7 +80,7 @@ def humanize_time(secs):
 
 def calcsaldomes(tabela, mes, ano, cargahoraria):
     totaltrabalhado = calctotaltrabmes(tabela, mes, ano)
-    totalatrabalhar = calcpadraomes(tabela, cargahoraria)
+    totalatrabalhar = calcpadraomes(tabela, cargahoraria, mes)
     saldosegundos = totaltrabalhado - totalatrabalhar
 
     saldohoras = humanize_time(saldosegundos)
