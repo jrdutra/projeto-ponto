@@ -2,6 +2,9 @@
   <dictionary name="jrdut">
     <words>
       <w>calcintervalo</w>
+      <w>calcpadraomes</w>
+      <w>calcsaldodia</w>
+      <w>calcsaldomes</w>
       <w>controle</w>
       <w>dados</w>
       <w>dadosfolha</w>
@@ -15,8 +18,12 @@
       <w>pesquisa</w>
       <w>ponto</w>
       <w>requisita</w>
+      <w>saldodomes</w>
+      <w>strhora</w>
       <w>tabela</w>
+      <w>tatalsegundos</w>
       <w>titulo</w>
+      <w>ultimahora</w>
       <w>verificamarcacaodia</w>
     </words>
   </dictionary>
