@@ -11,7 +11,7 @@ def calcintervalo(hora1, hora2):
     return dif
 
 
-def calcsaldodia(linha, mes, ano):
+def calctotaldia(linha, mes, ano):
     linha = formatalinha(linha, mes, ano)
     periodo1 = calcintervalo(linha[2], linha[3])
     periodo2 = calcintervalo(linha[4], linha[5])
@@ -23,9 +23,9 @@ def calcsaldodia(linha, mes, ano):
 
 
 def calctotaltrabmes(tabela, mes, ano):
-    saldodomes = calcsaldodia(tabela[0], mes, ano)
+    saldodomes = calctotaldia(tabela[0], mes, ano)
     for i in range(1, len(tabela)):
-        saldodomes = saldodomes + calcsaldodia(tabela[i], mes, ano)
+        saldodomes = saldodomes + calctotaldia(tabela[i], mes, ano)
     return int(saldodomes.total_seconds())
 
 
@@ -67,3 +67,19 @@ def verificamarcacaodia(linha):
         if strhora.find(":") >= 0:
            flag = True
     return flag
+
+
+def humanize_time(secs):
+    mins, secs = divmod(secs, 60)
+    hours, mins = divmod(mins, 60)
+    return '%02d:%02d:%02d' % (hours, mins, secs)
+
+
+def calcsaldomes(tabela, mes, ano, cargahoraria):
+    totaltrabalhado = calctotaltrabmes(tabela, mes, ano)
+    totalatrabalhar = calcpadraomes(tabela, cargahoraria)
+    saldosegundos = totaltrabalhado - totalatrabalhar
+
+    saldohoras = humanize_time(saldosegundos)
+
+    return saldohoras

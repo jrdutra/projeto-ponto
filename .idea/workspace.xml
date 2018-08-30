@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="127f888f-fa35-4d34-9bfe-327412b6cd28" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jrdut.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/jrdut.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDGCBot/calculadoradehoras.py" beforeDir="false" afterPath="$PROJECT_DIR$/SDGCBot/calculadoradehoras.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -50,8 +49,8 @@
       <file leaf-file-name="calculadoradehoras.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SDGCBot/calculadoradehoras.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="98">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -62,8 +61,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+            <state relative-caret-position="221">
+              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -79,6 +78,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>saldodia</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -305,8 +309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SDGCBot/calculadoradehoras.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="98">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -315,8 +319,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+        <state relative-caret-position="221">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

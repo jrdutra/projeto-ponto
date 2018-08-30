@@ -2,60 +2,34 @@ from SDGCBot import pontobiometrico
 from SDGCBot import extratordedados
 from SDGCBot import calculadoradehoras
 
+# ================
+# ENTRADA DE DADOS
+# ================
+mes = "08"
+ano = "2018"
+cpf = "08581603742"
+matricula = "28142"
+cargahorria = 6
+login = "-"
+senha= "-"
+# ================
+
+datafinal = mes + '-' + ano
+datainicial = datafinal
 
 parametros_req = {
-    'login': 'pelisangela',
-    'senha': 'daiana',
-    'matricula': '27330',
-    'cpf': '11666683710',
-    'datafinal': '08-2018',
-    'datainicial': '08-2018'
+    'login': login,
+    'senha': senha,
+    'matricula': matricula,
+    'cpf': cpf,
+    'datafinal': datafinal,
+    'datainicial': datainicial
 }
 
-#html_str = pontobiometrico.requisita(parametros_req)
-#dados = extratordedados.extrair(html_str)
-#dados[5][2] + dados[5][3]
-#dif = calculadoradehoras.calcintervalo("1/12/2001 - 07:40:00", "1/12/2001 - 13:36:00")
-#linha = ['1', 'Quarta', '08:02:00', '13:09:00', '', '', '', '', '', '', '', '']
-#linha = ['1', 'Quarta', '', '', '', '', '', '', '', '', '', '']
-#horas = calculadoradehoras.formatalinha(linha, "08", "2018")
 
+html_str = pontobiometrico.requisita(parametros_req)
+tabela = extratordedados.extrair(html_str)
 
-
-tabela = [['1', 'Quarta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['2', 'Quinta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['3', 'Sexta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['4', 'Sábado', '', '', '', '', '', '', '', '', '', ''],
-            ['5', 'Domingo', '', '', '', '', '', '', '', '', '', ''],
-            ['6', 'Segunda', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['7', 'Terça', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['8', 'Quarta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['9', 'Quinta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['10', 'Sexta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['11', 'Sábado', '', '', '', '', '', '', '', '', '', ''],
-            ['12', 'Domingo', '', '', '', '', '', '', '', '', '', ''],
-            ['13', 'Segunda', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['14', 'Terça', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['15', 'Quarta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['16', 'Quinta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['17', 'Sexta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['18', 'Sábado', '', '', '', '', '', '', '', '', '', ''],
-            ['19', 'Domingo', '', '', '', '', '', '', '', '', '', ''],
-            ['20', 'Segunda', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['21', 'Terça', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['22', 'Quarta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['23', 'Quinta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['24', 'Sexta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['25', 'Sábado', '', '', '', '', '', '', '', '', '', ''],
-            ['26', 'Domingo', '', '', '', '', '', '', '', '', '', ''],
-            ['27', 'Segunda', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['28', 'Terça', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['29', 'Quarta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['30', 'Quinta', '07:00:00', '13:00:00', '', '', '', '', '', '', '', ''],
-            ['31', 'Sexta', '', '', '', '', '', '', '', '', '', '']]
-
-horas = calculadoradehoras.calctotaltrabmes(tabela, "08", "2018")
-print(horas)
-horas = calculadoradehoras.calcpadraomes(tabela, 6)
+horas = calculadoradehoras.calcsaldomes(tabela, mes, ano, cargahorria)
 print(horas)
 
