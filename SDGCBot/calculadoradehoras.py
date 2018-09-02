@@ -40,7 +40,8 @@ def calcpadraomes(tabela, cargahoraria, mes):
         dia = str(tabela[i][1])
         sabado = "Sábado"
         domingo = "Domingo"
-        if (dia != sabado and dia != domingo) and (int(tabela[i][0]) <= diaderefernecia):
+        feriado = "Feriado"
+        if (dia != sabado and dia != domingo and dia != feriado) and (int(tabela[i][0]) <= diaderefernecia):
             tatalsegundos = tatalsegundos + (cargahoraria * 3600)
     return tatalsegundos
 
@@ -62,7 +63,6 @@ def formatalinha(linha, mes, ano):
             linha[i] = ultimahora
     return linha
 
-
 def verificamarcacaodia(linha):
     flag = False
     for i in range(0, 11):
@@ -78,9 +78,20 @@ def humanize_time(secs):
     return '%02d:%02d:%02d' % (hours, mins, secs)
 
 
-def calcsaldomes(tabela, mes, ano, cargahoraria):
-    totaltrabalhado = calctotaltrabmes(tabela, mes, ano)
-    totalatrabalhar = calcpadraomes(tabela, cargahoraria, mes)
+def addferiados(tabela, tabelaferiados, mes, ano):
+    for i in range(0, len(tabela)):
+        for j in range(0, len(tabelaferiados)):
+            if tabelaferiados[j][0] == ano:
+                if tabelaferiados[j][1] == mes:
+                    if tabelaferiados[j][2] == tabela[i][0]:
+                        tabela[i][1] = "Feriado"
+    return tabela
+
+
+def calcsaldomes(tabela, tabelaferiados, mes, ano, cargahoraria):
+    tabelatratada = addferiados(tabela, tabelaferiados, mes, ano)
+    totaltrabalhado = calctotaltrabmes(tabelatratada, mes, ano)
+    totalatrabalhar = calcpadraomes(tabelatratada, cargahoraria, mes)
     saldosegundos = totaltrabalhado - totalatrabalhar
 
     saldohoras = humanize_time(saldosegundos)

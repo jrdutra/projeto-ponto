@@ -1,17 +1,18 @@
 from SDGCBot import pontobiometrico
 from SDGCBot import extratordedados
 from SDGCBot import calculadoradehoras
+from SDGCBot import feriado
 
 # ================
 # ENTRADA DE DADOS
 # ================
 mes = "08"
 ano = "2018"
-cpf = "11666683710"
-matricula = "27330"
+cpf = "08581603742"
+matricula = "28142"
 cargahorria = 6
-login = "-"
-senha = "-"
+login = "pelisangela"
+senha = "daiana"
 # ================
 
 datafinal = mes + '-' + ano
@@ -30,6 +31,7 @@ parametros_req = {
 html_str = pontobiometrico.requisita(parametros_req)
 tabela = extratordedados.extrair(html_str)
 
-horas = calculadoradehoras.calcsaldomes(tabela, mes, ano, cargahorria)
+tabelaferiados = feriado.tabeladeferiados("feriados.csv")
+horas = calculadoradehoras.calcsaldomes(tabela, tabelaferiados, mes, ano, cargahorria)
 print("Saldo de: " + horas + " horas")
 
