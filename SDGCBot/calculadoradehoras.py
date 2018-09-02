@@ -98,7 +98,6 @@ def calcsaldomes(tabela, tabelaferiados, mes, ano, cargahoraria):
     totaltrabalhado = calctotaltrabmes(tabelatratada, mes, ano)
     totalatrabalhar = calcpadraomes(tabelatratada, cargahoraria, mes)
     saldosegundos = totaltrabalhado - totalatrabalhar
-    print(str(saldosegundos/3600))
     saldohoras = humanize_time(saldosegundos)
 
     return saldohoras
