@@ -6,13 +6,13 @@ from SDGCBot import feriado
 # ================
 # ENTRADA DE DADOS
 # ================
-mes = "08"
+mes = "05"
 ano = "2018"
-cpf = "08581603742"
-matricula = "28142"
+cpf = "11666683710"
+matricula = "27330"
 cargahorria = 6
-login = "pelisangela"
-senha = "daiana"
+login = "-"
+senha = "-"
 # ================
 
 datafinal = mes + '-' + ano
@@ -33,5 +33,5 @@ tabela = extratordedados.extrair(html_str)
 
 tabelaferiados = feriado.tabeladeferiados("feriados.csv")
 horas = calculadoradehoras.calcsaldomes(tabela, tabelaferiados, mes, ano, cargahorria)
-print("Saldo de: " + horas + " horas")
+print("Saldo de: " + horas)
 

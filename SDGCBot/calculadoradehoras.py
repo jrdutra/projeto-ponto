@@ -63,6 +63,7 @@ def formatalinha(linha, mes, ano):
             linha[i] = ultimahora
     return linha
 
+
 def verificamarcacaodia(linha):
     flag = False
     for i in range(0, 11):
@@ -72,10 +73,14 @@ def verificamarcacaodia(linha):
     return flag
 
 
-def humanize_time(secs):
-    mins, secs = divmod(secs, 60)
-    hours, mins = divmod(mins, 60)
-    return '%02d:%02d:%02d' % (hours, mins, secs)
+def humanize_time(segundos):
+    hora = segundos / 3600
+    seg_rest = segundos % 3600
+    minuto = 60 - (seg_rest / 60)
+    minuto_rest = seg_rest % 60
+    segundo = minuto_rest
+    res = '{:02.0f}'.format(hora) + ":" + '{:02.0f}'.format(minuto) + ":" + '{:02.0f}'.format(segundo)
+    return str(res)
 
 
 def addferiados(tabela, tabelaferiados, mes, ano):
@@ -93,7 +98,7 @@ def calcsaldomes(tabela, tabelaferiados, mes, ano, cargahoraria):
     totaltrabalhado = calctotaltrabmes(tabelatratada, mes, ano)
     totalatrabalhar = calcpadraomes(tabelatratada, cargahoraria, mes)
     saldosegundos = totaltrabalhado - totalatrabalhar
-
+    print(str(saldosegundos/3600))
     saldohoras = humanize_time(saldosegundos)
 
     return saldohoras

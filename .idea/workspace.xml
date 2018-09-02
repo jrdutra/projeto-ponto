@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="127f888f-fa35-4d34-9bfe-327412b6cd28" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/SDGCBot/feriado.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jrdut.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/jrdut.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projeto-ponto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projeto-ponto.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SDGCBot/calculadoradehoras.py" beforeDir="false" afterPath="$PROJECT_DIR$/SDGCBot/calculadoradehoras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feriados.csv" beforeDir="false" afterPath="$PROJECT_DIR$/feriados.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +50,8 @@
       <file leaf-file-name="calculadoradehoras.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SDGCBot/calculadoradehoras.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="43" column="63" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
+            <state relative-caret-position="533">
+              <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -74,8 +71,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="238">
+              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -115,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1383" />
@@ -350,8 +347,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SDGCBot/calculadoradehoras.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="43" column="63" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
+        <state relative-caret-position="533">
+          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -360,8 +357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="238">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
