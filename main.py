@@ -8,8 +8,8 @@ from SDGCBot import feriado
 # ================
 mes = "08"
 ano = "2018"
-cpf = "11666683710"
-matricula = "27330"
+cpf = "01755427751"
+matricula = "38578"
 cargahorria = 6
 login = "-"
 senha = "-"
@@ -29,6 +29,10 @@ parametros_req = {
 
 html_str = pontobiometrico.requisita(parametros_req)
 tabela = extratordedados.extrair(html_str)
+
+for i in range(0, len(tabela)):
+    print(tabela[i])
+
 
 tabelaferiados = feriado.tabeladeferiados("feriados.csv")
 horas = calculadoradehoras.calcsaldomes(tabela, tabelaferiados, mes, ano, cargahorria)
