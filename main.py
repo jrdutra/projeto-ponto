@@ -8,7 +8,7 @@ from SDGCBot import feriado
 # ================
 mes = "08"
 ano = "2018"
-cpf = "01755427751"
+cpf = "11269350773"
 matricula = "38578"
 cargahorria = 6
 login = "-"
