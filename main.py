@@ -2,16 +2,22 @@ from SDGCBot import pontobiometrico
 from SDGCBot import extratordedados
 from SDGCBot import calculadoradehoras
 from SDGCBot import feriado
+from SDGCBot import dadosfuncionario
 import os
+
+
+tabeladados = dadosfuncionario.dadosfuncionarios("dadosfuncionario.csv")
+
 
 # ================
 # ENTRADA DE DADOS JOAO
 # ================
-mes = "09"
-ano = "2018"
-cpf = "11666683710"
-matricula = "27330"
-cargahorria = 6
+nome = str(tabeladados[0][0])
+mes = str(tabeladados[0][1])
+ano = str(tabeladados[0][2])
+cpf = str(tabeladados[0][3])
+matricula = str(tabeladados[0][4])
+cargahorria = int(tabeladados[0][5])
 login = "-"
 senha = "-"
 # ================
@@ -33,7 +39,7 @@ tabela = extratordedados.extrair(html_str)
 
 os.system('cls')
 print("---------------------------------------------------------------------------------------------------------")
-print("                                            PONTO DO MÊS " + mes)
+print("                                   PONTO DO MÊS " + mes + " de " + nome)
 print("---------------------------------------------------------------------------------------------------------")
 
 
