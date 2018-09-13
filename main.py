@@ -28,6 +28,12 @@ parametros_req = {
 
 
 html_str = pontobiometrico.requisita(parametros_req)
+
+#arquivo = open('ponto.html', 'w') # Abre novamente o arquivo (escrita)
+#arquivo.write("fsdg")    # escreva o conteúdo criado anteriormente nele.
+#arquivo.close()
+
+print(html_str)
 tabela = extratordedados.extrair(html_str)
 
 horas = calculadoradehoras.calcsaldomes(tabela, mes, ano, cargahorria)
