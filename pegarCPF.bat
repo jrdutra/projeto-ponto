@@ -1,0 +1,2 @@
+python buscaDadosMatricula.py
+pause

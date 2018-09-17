@@ -38,3 +38,25 @@ def requisita(parametros):
         response = session.post(PONTO_URL, data=dadosfolha)
         html_str = response.text
     return html_str
+
+def requisitaPesquisa(parametros):
+    dadoslogin = {'nome_usuario': parametros['login'],
+                   'senha_usuario': parametros['senha'],
+                   'alterarSenha': '',
+                   'verifica': '1'}
+
+    dadospesquisa = {'organiza': 'nome_info',
+                        'nome': '',
+                        'matricula': parametros['matricula'],
+                        'cpf': '',
+                        'valor_mes_ano_final': parametros['datafinal'],
+                        'valor_mes_ano_inicial': parametros['datainicial'],
+                        'pesquisa': '1',
+                        'enviou': '1'}
+    
+    with requests.Session() as session:
+        response = session.post(POST_LOGIN_URL, data=dadoslogin)
+        response = session.get(PESQUISA_URL)
+        response = session.post(PESQUISA_URL, data=dadospesquisa)
+    html_str = response.text
+    return html_str
